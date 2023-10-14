@@ -6,26 +6,26 @@ export default function Login() {
         <View
             flex={1}
             backgroundColor="#16171c"
-            padding={26}
+            padding={16}
             justifyContent="center"
             alignItems="center"
         >
-            <Text paddingBottom={30} size="3xl" color="$white">Вход</Text>
+            <Text paddingBottom={50} size="3xl" color="$white">Вход</Text>
 
-            <Box width="$full" paddingVertical={10}>
+            <Box width="$full" paddingBottom={30}>
                 <TextInput placeholder="Почта" />
             </Box>
-            <Box width="$full" paddingVertical={10}>
+            <Box width="$full" paddingBottom={20}>
                 <TextInput type="password" placeholder="Пароль" />
             </Box>
 
-            <Box paddingBottom={50} width="$full" flexDirection="row" justifyContent="space-between">
+            <Box paddingBottom={60} width="$full" flexDirection="row" justifyContent="space-between">
                 <CheckBox />
                 <Text underline={true} color="#7b7c7f">Восстановить пароль</Text>
             </Box>
 
             <Box width="$full">
-                <Box paddingBottom={20}>
+                <Box paddingBottom={16}>
                     <PrimaryButton>Войти</PrimaryButton>
                 </Box>
                 <SecondaryButton>Создать аккаунт</SecondaryButton>
