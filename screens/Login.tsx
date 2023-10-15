@@ -1,7 +1,8 @@
-import { Box, Text, View } from "@gluestack-ui/themed";
-import { PrimaryButton, SecondaryButton, TextInput, CheckBox } from "../components";
+import { Box, View } from "@gluestack-ui/themed";
+import { PrimaryButton, SecondaryButton, TextInput, CheckBox, Text } from "../components";
+import { ComponentProps } from "react";
 
-export default function Login() {
+export default function Login(props: ComponentProps<typeof View>) {
     return (
         <View
             flex={1}
@@ -9,8 +10,9 @@ export default function Login() {
             padding={16}
             justifyContent="center"
             alignItems="center"
+            {...props}
         >
-            <Text paddingBottom={50} size="3xl" color="$white">Вход</Text>
+            <Text fontFamily="Rubik-Bold" paddingBottom={50} size="3xl" color="$white">Вход</Text>
 
             <Box width="$full" paddingBottom={30}>
                 <TextInput placeholder="Почта" />
