@@ -12,18 +12,10 @@ import {
 } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Register from './screens/Register';
-import { Box, Text, TextareaInput, View } from '@gluestack-ui/themed';
 
 SplashScreen.preventAutoHideAsync();
 
 const Stack = createNativeStackNavigator();
-
-export type RootStackParamList = {
-  Login: undefined;
-  Register: undefined;
-};
-
-type LoginProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -49,7 +41,7 @@ export default function App() {
           <Stack.Screen
             options={{
               headerShown: false,
-              statusBarStyle: 'light',
+              statusBarColor: '#16171c',
             }}
             name="Login"
           >
@@ -58,7 +50,7 @@ export default function App() {
           <Stack.Screen
             options={{
               headerShown: false,
-              statusBarStyle: 'light',
+              statusBarColor: '#16171c',
             }}
             name="Register"
           >

@@ -6,13 +6,18 @@ import {
   CheckBox,
   Text,
 } from '../components';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { ComponentProps, ProfilerProps } from 'react';
-import { RootStackParamList } from '../App';
+import { ParamListBase, RouteProp } from '@react-navigation/native';
+import Vkontakte from '../assets/Icons/Vkontakte';
+import Telegram from '../assets/Icons/Telegram';
+import Discord from '../assets/Icons/Discord';
 
-type LoginProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+interface LoginProps {
+  route: RouteProp<ParamListBase, 'Login'>;
+  navigation: any;
+  onLayout: () => Promise<void>;
+}
 
-export default function Login(props: ComponentProps<typeof View> & LoginProps) {
+export default function Login(props: LoginProps) {
   return (
     <View
       flex={1}
@@ -20,9 +25,11 @@ export default function Login(props: ComponentProps<typeof View> & LoginProps) {
       padding={16}
       justifyContent="center"
       alignItems="center"
-      {...props}
+      onLayout={props.onLayout}
+      paddingBottom={200}
     >
       <Text
+        marginTop={140}
         fontFamily="Rubik-Bold"
         paddingBottom={50}
         size="3xl"
@@ -44,8 +51,8 @@ export default function Login(props: ComponentProps<typeof View> & LoginProps) {
         flexDirection="row"
         justifyContent="space-between"
       >
-        <CheckBox />
-        <Text underline={true} color="#7b7c7f">
+        <CheckBox text="Запомнить меня" />
+        <Text fontSize={13} textAlign="center" underline={true} color="#7b7c7f">
           Восстановить пароль
         </Text>
       </Box>
@@ -58,6 +65,22 @@ export default function Login(props: ComponentProps<typeof View> & LoginProps) {
         <SecondaryButton onPress={() => props.navigation.navigate('Register')}>
           Создать аккаунт
         </SecondaryButton>
+      </Box>
+
+      <Box position="absolute" bottom={13}>
+        <Text fontSize={13} color="rgba(255, 255, 255, 0.70)">
+          Также вы можете войти через
+        </Text>
+        <Box
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between"
+          marginTop={10}
+        >
+          <Vkontakte width={50} height={50} />
+          <Telegram width={50} height={50} />
+          <Discord width={50} height={50} />
+        </Box>
       </Box>
     </View>
   );
