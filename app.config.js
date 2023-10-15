@@ -1,4 +1,4 @@
-{
+module.exports = {
   "expo": {
     "name": "sportTogether",
     "slug": "sporttogether",
@@ -24,6 +24,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": process.env.PROJECT_ID
+      }
     },
     "owner": "qbite"
   }
