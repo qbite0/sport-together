@@ -49,7 +49,7 @@ export default function App() {
           <Stack.Screen
             options={{
               headerShown: false,
-              statusBarStyle: 'light',
+              statusBarColor: "#16171c"
             }}
             name="Login"
           >
@@ -58,7 +58,7 @@ export default function App() {
           <Stack.Screen
             options={{
               headerShown: false,
-              statusBarStyle: 'light',
+              statusBarColor: "#16171c"
             }}
             name="Register"
           >
