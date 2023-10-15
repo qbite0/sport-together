@@ -1,0 +1,10 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="status_right" clip-path="url(#clip0_0_752)">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10ZM10 1.81818C5.48131 1.81818 1.81818 5.48131 1.81818 10C1.81818 14.5187 5.48131 18.1818 10 18.1818C14.5187 18.1818 18.1818 14.5187 18.1818 10C18.1818 5.48131 14.5187 1.81818 10 1.81818ZM14.3761 6.89204L9.28984 14.0128L4.90909 10.7273L6 9.27273L8.89198 11.4417L12.8966 5.83524L14.3761 6.89204Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_0_752">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
