@@ -8,6 +8,8 @@ jobs:
   build:
     name: Install and build
     runs-on: ubuntu-latest
+    env:
+      PROJECT_ID: ${{ vars.PROJECT_ID }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
